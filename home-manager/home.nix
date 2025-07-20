@@ -14,16 +14,6 @@ in
     fastfetch
   ];
 
-  programs.git = {
-    enable = true;
-    userName = "signum6561";
-    userEmail = "quiocdat777@gmail.com";
-
-    extraConfig.core = {
-      editor = "hx";
-    };
-  };
-
   home.shellAliases = {
     reload-home = "home-manager switch --flake ${dotfiles}/home-manager --impure";
     home-sh = "cd ~/dotfiles/home-manager";
@@ -44,6 +34,8 @@ in
   imports = [
     ./modules/programs/zsh.nix
     ./modules/programs/helix.nix
+    ./modules/programs/git.nix
+    ./modules/programs/fastfetch.nix
   ];
 
   # Let Home Manager install and manage itself.
