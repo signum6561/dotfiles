@@ -11,7 +11,8 @@ in
   home.packages = with pkgs; [
     glibcLocales
     fzf
-    fastfetch
+    asciiquarium-transparent
+    eza
   ];
 
   home.shellAliases = {
@@ -19,6 +20,9 @@ in
     home-sh = "cd ~/dotfiles/home-manager";
     dot-sh = "cd ~/dotfiles";
     conf-sh = "cd ~/dotfiles/config";
+    ls = "eza --icons";
+    ll = "ls -l --no-permissions --no-user";
+    lt = "ls --tree -L=3 --group-directories-first --git-ignore";
   };
 
   home.file = {
